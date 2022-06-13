@@ -5,7 +5,9 @@ import { Icon } from "@iconify/react";
 const ContactMeSection = () => {
   return (
     <section className="contact-me-section">
-      <h2 className="section-heading contact-me">Contact Me</h2>
+      <h2 className="section-heading contact-me" id="contact-me">
+        Contact Me
+      </h2>
       <ContactIllustration />
       <form>
         <label htmlFor="name">Full name:</label>

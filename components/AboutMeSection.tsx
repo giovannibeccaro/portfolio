@@ -3,7 +3,9 @@ import React from "react";
 const AboutMeSection = () => {
   return (
     <section className="about-section">
-      <h2 className="section-heading about-me">About Me</h2>
+      <h2 className="section-heading about-me" id="about-me">
+        About Me
+      </h2>
       <div className="about-me-paragraphs">
         <article>
           <h4>Who am I?</h4>
