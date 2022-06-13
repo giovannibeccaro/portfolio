@@ -1,3 +1,65 @@
-.icon {
-  font-size: 3rem;
+.section-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-icon {
+  font-size: 2rem;
+  position: relative;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.skills-icon-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+  gap: 0.25em;
+  transition-duration: 80ms;
+  color: $accentColor80;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 1px;
+    background-color: $accentColor15;
+    top: 10px;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background-color: $accentColor15;
+    bottom: 0;
+  }
+  &.rest::before,
+  &.nextjs::before,
+  &.firebase::before,
+  &.figma::before,
+  &.material-ui::before {
+    content: unset;
+  }
+  &.bootstrap::after,
+  &.graphql::after,
+  &.material-ui::after {
+    content: unset;
+  }
+  p {
+    font-size: 0.75rem;
+    cursor: default;
+    user-select: none;
+  }
+
+  &:hover {
+    background-color: hsl(0, 0%, 94%);
+    color: $accentColor;
+  }
 }
