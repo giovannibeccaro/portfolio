@@ -3,13 +3,17 @@ import React from "react";
 const AboutMeSection = () => {
   return (
     <section className="about-section">
-      <h2 className="section-heading about-me" id="about-me">
+      <h2
+        className="section-heading about-me"
+        id="about-me"
+        data-aos="zoom-in-up"
+      >
         About Me
       </h2>
       <div className="about-me-paragraphs">
         <article>
-          <h4>Who am I?</h4>
-          <p>
+          <h4 data-aos="fade-up">Who am I?</h4>
+          <p data-aos="fade-up">
             Hello! My name is <b>Giovanni Beccaro</b> and I enjoy building
             things on the internet. I started surfing the world wide web at 12,
             and since then my interest in this world
@@ -23,8 +27,8 @@ const AboutMeSection = () => {
           </p>
         </article>
         <article>
-          <h4>How do I work?</h4>
-          <p>
+          <h4 data-aos="fade-up">How do I work?</h4>
+          <p data-aos="fade-up">
             When I code, what I usually do is setup a <b>neat</b> and{" "}
             <b>organized</b> work environment, so that I can keep control over
             everything I do. I always try to mantain my code <b>clean</b> and{" "}

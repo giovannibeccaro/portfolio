@@ -4,10 +4,14 @@ import { Icon } from "@iconify/react";
 const ProjectsSection = () => {
   return (
     <section className="projects-section">
-      <h2 className="section-heading projects" id="projects">
+      <h2
+        className="section-heading projects"
+        id="projects"
+        data-aos="zoom-in-up"
+      >
         My Projects
       </h2>
-      <article className="single-project">
+      <article className="single-project" data-aos="fade-up">
         <div className="screenshot">put screenshot in place of this div</div>
         <h3>Pomodoro Timer</h3>
         <h4>A tool to help you stay focused</h4>
@@ -26,7 +30,11 @@ const ProjectsSection = () => {
           <b>Features: </b>ES6 syntax, JS classes, modules, timers, audio
           toggle, multiple languages, music on click, five different themes.
         </p>
-        <div className="btns-section">
+        <div
+          className="btns-section"
+          data-aos="zoom-in-up"
+          data-aos-duration="350"
+        >
           <a href="#">
             <button className="live-website-btn">
               {" "}
@@ -43,7 +51,7 @@ const ProjectsSection = () => {
           </a>
         </div>
       </article>
-      <article className="single-project">
+      <article data-aos="fade-up" className="single-project">
         <div className="screenshot">put screenshot in place of this div</div>
         <h3>Book Manager</h3>
         <h4>
@@ -71,7 +79,11 @@ const ProjectsSection = () => {
           multiple languages, guest mode to use the website without logging in,
           three lists to save books
         </p>
-        <div className="btns-section">
+        <div
+          className="btns-section"
+          data-aos="zoom-in-up"
+          data-aos-duration="350"
+        >
           <a href="#">
             <button className="live-website-btn">
               {" "}
@@ -88,7 +100,7 @@ const ProjectsSection = () => {
           </a>
         </div>
       </article>
-      <article className="single-project">
+      <article data-aos="fade-up" className="single-project">
         <div className="screenshot">put screenshot in place of this div</div>
         <h3>Le Chicche di Girotondo</h3>
         <h4>Kids store website </h4>
@@ -120,7 +132,11 @@ const ProjectsSection = () => {
           on scroll animations, search and filter bar, responsive design, Cookie
           banner
         </p>
-        <div className="btns-section">
+        <div
+          className="btns-section"
+          data-aos="zoom-in-up"
+          data-aos-duration="350"
+        >
           <a href="#">
             <button className="live-website-btn">
               {" "}

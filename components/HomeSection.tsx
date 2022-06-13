@@ -1,18 +1,26 @@
-import React from "react";
-import Image from "next/image";
-import { Icon } from "@iconify/react";
-import Logo from "./svgs/Logo";
+import React, { useEffect } from "react";
 import ScrollElement from "./svgs/ScrollElement";
 import HeroIllustration from "./svgs/HeroIllustration";
 
 const HomeSection = () => {
   return (
     <section className="hero-section">
-      <h1>designing and creating beautiful experiences</h1>
-      <button className="hero-btn">CONTACT ME</button>
-      <p>or</p>
-      <ScrollElement />
-      <HeroIllustration />
+      <h1 data-aos="zoom-in-up">
+        designing and creating beautiful experiences
+      </h1>
+      <button data-aos="fade-up" className="hero-btn">
+        CONTACT ME
+      </button>
+      <p data-aos="zoom-in-up" data-aos-delay="200">
+        or
+      </p>
+      <div data-aos="zoom-in-up" data-aos-delay="300">
+        <ScrollElement />
+      </div>
+
+      <div data-aos="fade-up">
+        <HeroIllustration />
+      </div>
     </section>
   );
 };
