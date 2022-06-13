@@ -8,9 +8,11 @@ const HomeSection = () => {
       <h1 data-aos="zoom-in-up">
         designing and creating beautiful experiences
       </h1>
-      <button data-aos="fade-up" className="hero-btn">
-        CONTACT ME
-      </button>
+      <a href="#contact-me">
+        <button data-aos="fade-up" className="hero-btn">
+          CONTACT ME
+        </button>
+      </a>
       <p data-aos="zoom-in-up" data-aos-delay="200">
         or
       </p>

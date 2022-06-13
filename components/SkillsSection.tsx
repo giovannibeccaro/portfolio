@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 const SkillsSection = () => {
   return (
     <section className="skills-section">
-      <h2 className="section-heading skills" id="skills" data-aos="zoom-in-up">
+      <h2 className="section-heading skills" id="skills">
         My Skills
       </h2>
       <div className="skills-grid">

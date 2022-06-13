@@ -5,11 +5,7 @@ import { Icon } from "@iconify/react";
 const ContactMeSection = () => {
   return (
     <section className="contact-me-section">
-      <h2
-        className="section-heading contact-me"
-        id="contact-me"
-        data-aos="zoom-in-up"
-      >
+      <h2 className="section-heading contact-me" id="contact-me">
         Contact Me
       </h2>
       <div data-aos="fade-up">

@@ -2,7 +2,13 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-top: -0.5em;
-  margin: -0.5em -1.75em 0 -1.75em;
+
+  @media (min-width: 500px) {
+    margin: -0.5em -1.25em 0 -1.25em;
+  }
+  @media (min-width: 650px) {
+    margin: -0.5em -1.75em 0 -1.75em;
+  }
 
   ul {
     margin: 0;
@@ -21,6 +27,7 @@ nav {
     background-color: hsla(0, 0%, 19%, 0.97);
     padding-right: 1.5em;
     gap: 0.5em;
+    z-index: 1000;
 
     &.not-active {
       opacity: 0;
@@ -84,8 +91,8 @@ nav {
   font-size: 2em;
   line-height: 0;
   margin-top: 0.25rem;
-  z-index: 300;
-  transition-duration: 150ms;
+  z-index: 1001;
+  transition-duration: 250ms;
   &.close {
     color: white;
     transform: rotate(180deg);

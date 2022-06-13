@@ -4,11 +4,7 @@ import { Icon } from "@iconify/react";
 const ProjectsSection = () => {
   return (
     <section className="projects-section">
-      <h2
-        className="section-heading projects"
-        id="projects"
-        data-aos="zoom-in-up"
-      >
+      <h2 className="section-heading projects" id="projects">
         My Projects
       </h2>
       <article className="single-project" data-aos="fade-up">
