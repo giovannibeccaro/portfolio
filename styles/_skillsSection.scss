@@ -19,6 +19,7 @@
 }
 
 .skills-icon-box {
+  aspect-ratio: 1 / 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -66,5 +67,15 @@
   &:hover {
     background-color: hsl(0, 0%, 94%);
     color: $accentColor;
+  }
+}
+
+@media (min-width: 700px) {
+  .skills-icon {
+    font-size: 3em;
+  }
+
+  .skills-icon-box {
+    padding: 2em;
   }
 }
