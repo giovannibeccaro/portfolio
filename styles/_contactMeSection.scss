@@ -1,0 +1,84 @@
+.contact-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    margin-block: 5em 3em;
+
+    label {
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      border: unset;
+      border-radius: 6px;
+      padding: 0.5em 0.75em;
+      margin-block: 0.15em 1em;
+      width: 100%;
+      position: relative;
+      outline-color: hsla(0, 0%, 19%, 0);
+      transition: outline-color 150ms;
+
+      &:focus-within {
+        outline-color: $accentColor;
+        outline: 2px solid;
+      }
+    }
+
+    input {
+      height: 2.25em;
+    }
+
+    textarea {
+      resize: none;
+      height: 10em;
+    }
+
+    button {
+      background-color: $accentColor;
+      border: unset;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.65em 1.5em;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+  }
+}
+
+.download-link {
+  background-color: $accentColor;
+  color: white;
+  font-weight: 500;
+  border: unset;
+  padding: 0.75em 1.25em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 2.5em;
+  font-size: 0.85rem;
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.9rem;
+    color: $accentColor;
+
+    .icon-link {
+      font-size: 1.75rem;
+    }
+  }
+}
