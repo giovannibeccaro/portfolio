@@ -5,8 +5,19 @@ import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillsSection";
 import AboutMeSection from "../components/AboutMeSection";
 import ContactMeSection from "../components/ContactMeSection";
+import { useEffect } from "react";
 
 const MainPage: NextPage = () => {
+  useEffect(() => {
+    const timer = window.setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 10);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />

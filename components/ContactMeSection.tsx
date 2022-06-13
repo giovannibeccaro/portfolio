@@ -18,11 +18,6 @@ const ContactMeSection = () => {
         <textarea name="message" id="message"></textarea>
         <button>Send Message</button>
       </form>
-      <a href="assets/resume.pdf" download="giovanni-beccaro-resume.pdf">
-        <button className="download-link">
-          <Icon className="btn-icon" icon="entypo:download" /> Download Resume
-        </button>
-      </a>
       <div className="contact-links">
         <a href="mailto:gio.beccaro@gmail.com" target="_blank" rel="noreferrer">
           <Icon className="icon-link" icon="entypo:mail" />{" "}
@@ -48,6 +43,11 @@ const ContactMeSection = () => {
           Giovanni Beccaro
         </a>
       </div>
+      <a href="assets/resume.pdf" download="giovanni-beccaro-resume.pdf">
+        <button className="download-link">
+          <Icon className="btn-icon" icon="entypo:download" /> Download Resume
+        </button>
+      </a>
     </section>
   );
 };
