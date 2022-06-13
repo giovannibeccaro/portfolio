@@ -1,0 +1,77 @@
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-bottom: 2.25em;
+    text-align: center;
+  }
+
+  .btns-section {
+    display: flex;
+    justify-content: center;
+    gap: max(5%, 10px);
+    white-space: nowrap;
+    margin-bottom: 3.5em;
+
+    button {
+      display: flex;
+      gap: 0.35em;
+      padding: 0.5em 0.85em;
+      align-items: center;
+      line-height: 1;
+      border-radius: 5em;
+      border: unset;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+    }
+
+    .github-btn {
+      background-color: $accentColor;
+      color: white;
+      border: 1px solid $accentColor;
+    }
+    .live-website-btn {
+      background-color: unset;
+      border: 1px solid $accentColor;
+      color: $accentColor;
+    }
+  }
+}
+
+.single-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screenshot {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  color: white;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25em;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  margin-bottom: 1.5em;
+}

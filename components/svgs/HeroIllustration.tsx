@@ -4,8 +4,7 @@ const HeroIllustration = () => {
   return (
     <>
       <svg
-        width="326"
-        height="140"
+        className="hero-illustration"
         viewBox="0 0 326 140"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

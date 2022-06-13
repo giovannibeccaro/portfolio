@@ -8,8 +8,7 @@ const Logo: React.FC<Props> = ({ darktheme }) => {
   return (
     <>
       <svg
-        width="182"
-        height="36"
+        className="logo"
         viewBox="0 0 182 36"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
