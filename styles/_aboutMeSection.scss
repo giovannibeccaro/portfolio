@@ -1,0 +1,27 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  font-size: 0.85rem;
+}
+
+article {
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+  p {
+    color: $textColor;
+    b {
+      font-weight: 600;
+      color: hsl(0, 0%, 28%);
+    }
+  }
+}

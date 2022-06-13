@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 const SkillsSection = () => {
   return (
-    <section className="section-skills">
+    <section className="skills-section">
       <h2 className="section-heading skills">My Skills</h2>
       <div className="skills-grid">
         <div className="skills-icon-box rest">

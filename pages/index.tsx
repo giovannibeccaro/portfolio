@@ -3,6 +3,8 @@ import HomeSection from "../components/HomeSection";
 import Navbar from "../components/Navbar";
 import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillsSection";
+import AboutMeSection from "../components/AboutMeSection";
+import ContactMeSection from "../components/ContactMeSection";
 
 const MainPage: NextPage = () => {
   return (
@@ -11,6 +13,8 @@ const MainPage: NextPage = () => {
       <HomeSection />
       <ProjectsSection />
       <SkillsSection />
+      <AboutMeSection />
+      <ContactMeSection />
     </>
   );
 };
