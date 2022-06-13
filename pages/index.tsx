@@ -15,6 +15,9 @@ const MainPage: NextPage = () => {
       <SkillsSection />
       <AboutMeSection />
       <ContactMeSection />
+      <footer>
+        <p>Designed and coded by Giovanni Beccaro</p>
+      </footer>
     </>
   );
 };
