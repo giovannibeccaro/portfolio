@@ -34,7 +34,7 @@ nav {
       color: white;
       font-weight: 500;
       text-transform: uppercase;
-      font-size: 1.35rem;
+      font-size: clamp(1.35rem, 3.9vw, 3rem);
       position: relative;
       transition: transform 150ms;
       cursor: pointer;
@@ -65,7 +65,16 @@ nav {
 }
 
 .logo {
-  width: 12.5em;
+  width: 12em;
+  @media (min-width: 390px) {
+    width: 13.9em;
+  }
+  @media (min-width: 500px) {
+    width: 15em;
+  }
+  @media (min-width: 650px) {
+    width: 17em;
+  }
 }
 
 .menu-btn {
@@ -83,5 +92,14 @@ nav {
   &.open {
     color: $accentColor;
     transform: rotate(360deg);
+  }
+
+  @media (min-width: 500px) {
+    font-size: 2.5em;
+    margin-top: 0.39rem;
+  }
+  @media (min-width: 650px) {
+    font-size: 3.5em;
+    margin-top: 0.5rem;
   }
 }

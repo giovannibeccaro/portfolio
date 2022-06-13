@@ -9,13 +9,13 @@
 }
 
 .skills-icon {
-  font-size: 2rem;
+  font-size: 2em;
   position: relative;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .skills-icon-box {
@@ -24,9 +24,10 @@
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
-  gap: 0.25em;
+  gap: 0.5em;
   transition-duration: 80ms;
   color: $accentColor80;
+
   &::before {
     content: "";
     position: absolute;
@@ -57,7 +58,7 @@
     content: unset;
   }
   p {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     cursor: default;
     user-select: none;
   }

@@ -41,7 +41,7 @@
       border: unset;
       color: white;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.85em;
       padding: 0.65em 1.5em;
       text-transform: uppercase;
     }
@@ -58,7 +58,7 @@
   align-items: center;
   gap: 0.5em;
   margin-top: 2.5em;
-  font-size: 0.85rem;
+  font-size: 0.85em;
   border-radius: 3em;
 
   .btn-icon {
@@ -75,11 +75,11 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: $accentColor;
 
     .icon-link {
-      font-size: 1.75rem;
+      font-size: 2em;
     }
   }
 }
