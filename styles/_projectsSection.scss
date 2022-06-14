@@ -16,6 +16,7 @@
     line-height: 1.25;
     margin-bottom: 2.25em;
     text-align: center;
+    color: $accentColor80;
   }
 
   .btns-section {
@@ -52,27 +53,77 @@
       color: $accentColor;
     }
   }
+  @media (min-width: $desktopBP) {
+    width: 90%;
+    margin-inline: auto;
+    font-size: 1.15rem;
+    h3 {
+      text-align: left;
+      font-weight: 700;
+      margin-bottom: 0.39em;
+      font-size: 1.3em;
+    }
+    h4 {
+      text-align: left;
+      font-weight: 700;
+      margin-bottom: 1.25em;
+      font-size: 0.9em;
+    }
+    .btns-section {
+      margin-block: 1em 0;
+    }
+  }
+  @media (min-width: $desktopBP4) {
+    width: 80%;
+  }
 }
 
 .single-project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $desktopBP) {
+    flex-direction: row;
+    width: 100%;
+    gap: 3em;
+    align-items: flex-start;
+    margin-bottom: 8em;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .screenshot {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  color: white;
-  background-color: coral;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.25em;
+  flex: 0 0 50%;
 }
 
 .project-description {
   font-size: 0.9em;
   margin-bottom: 1.5em;
   margin-right: auto;
+  @media (min-width: $desktopBP) {
+    margin-bottom: 0.15em;
+    font-size: 1em;
+    &.main {
+      margin-bottom: 1.25em;
+    }
+  }
+  @media (min-width: $desktopBP2) {
+    font-size: 0.95em;
+  }
+  @media (min-width: $desktopBP3) {
+    font-size: 0.9em;
+  }
+  @media (min-width: $desktopBP4) {
+    font-size: 0.8em;
+  }
+  @media (min-width: $desktopBP5) {
+    font-size: 0.9em;
+  }
 }
