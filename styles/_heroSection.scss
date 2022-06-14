@@ -32,6 +32,46 @@
       }
     }
   }
+  @media (min-width: $desktopBP2) {
+    font-size: 1.35em;
+    .desktop-hero-left {
+      h1 {
+        font-size: 2.75em;
+      }
+    }
+  }
+  @media (min-width: $desktopBP3) {
+    font-size: 1.45em;
+    .desktop-hero-left {
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+  @media (min-width: $desktopBP4) {
+    font-size: 1.6em;
+    .desktop-hero-left {
+      h1 {
+        font-size: 3.35em;
+      }
+    }
+  }
+  @media (min-width: $desktopBP5) {
+    font-size: 1.8em;
+    .desktop-hero-left {
+      h1 {
+        font-size: 3.65em;
+      }
+    }
+  }
+  @media (min-width: $desktopBP6) {
+    font-size: 1.15vw;
+    .desktop-hero-left {
+      h1 {
+        font-size: 3.65em;
+      }
+    }
+  }
 }
 
 .desktop-hero-left {
@@ -65,6 +105,7 @@
 
   @media (min-width: $desktopBP) {
     margin-right: auto;
+    font-size: 1.2em;
   }
 }
 
@@ -89,10 +130,19 @@
   @media (min-width: $desktopBP) {
     width: 22px;
   }
+  @media (min-width: $desktopBP3) {
+    width: 28px;
+  }
+  @media (min-width: $desktopBP4) {
+    width: 32px;
+  }
+  @media (min-width: $desktopBP6) {
+    width: 1.35vw;
+  }
 }
 
 .hero-illustration {
-  width: 100vw;
+  width: 102vw;
   @media (min-width: $desktopBP) {
     width: 70vw;
     position: absolute;

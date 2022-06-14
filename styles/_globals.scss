@@ -37,8 +37,8 @@ body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   color: $accentColor;
-  background-color: $bgColor;
   padding: 1.5em;
+  overflow-x: hidden;
   @media (min-width: 390px) {
     font-size: 1.1rem;
   }
@@ -91,6 +91,10 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+html {
+  overflow-x: hidden;
 }
 
 *::-moz-selection,

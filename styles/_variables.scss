@@ -8,6 +8,11 @@ $textColor: hsl(0, 0%, 35%);
 
 //? Break points
 $desktopBP: 1025px;
+$desktopBP2: 1320px;
+$desktopBP3: 1580px;
+$desktopBP4: 1900px;
+$desktopBP5: 2330px;
+$desktopBP6: 2850px;
 
 @mixin hoverEffect {
   clip-path: inset(100%);
