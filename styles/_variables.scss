@@ -7,7 +7,7 @@ $accentColor80: hsla(0, 0%, 19%, 0.8);
 $textColor: hsl(0, 0%, 35%);
 
 //? Break points
-$desktopBP: 1150px;
+$desktopBP: 1025px;
 
 @mixin hoverEffect {
   clip-path: inset(100%);

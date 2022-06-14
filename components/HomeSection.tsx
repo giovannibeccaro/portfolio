@@ -5,22 +5,26 @@ import HeroIllustration from "./svgs/HeroIllustration";
 const HomeSection = () => {
   return (
     <section className="hero-section">
-      <h1 data-aos="zoom-in-up">
-        designing and creating beautiful experiences
-      </h1>
-      <a href="#contact-me">
-        <button data-aos="fade-up" className="hero-btn">
-          CONTACT ME
-        </button>
-      </a>
-      <p data-aos="zoom-in-up" data-aos-delay="200">
-        or
-      </p>
-      <div data-aos="zoom-in-up" data-aos-delay="300">
-        <ScrollElement />
+      <div className="desktop-hero-left">
+        <h1 data-aos="zoom-in-up">
+          designing and creating beautiful experiences
+        </h1>
+        <div className="desktop-hero-bottom-left">
+          <a href="#contact-me">
+            <button data-aos="fade-up" className="hero-btn">
+              CONTACT ME
+            </button>
+          </a>
+          <p data-aos="zoom-in-up" data-aos-delay="200">
+            or
+          </p>
+          <div data-aos="zoom-in-up" data-aos-delay="300">
+            <ScrollElement />
+          </div>
+        </div>
       </div>
 
-      <div data-aos="fade-up">
+      <div className="hero-illustration" data-aos="fade-up">
         <HeroIllustration />
       </div>
     </section>

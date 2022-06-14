@@ -51,6 +51,10 @@ body {
     font-size: 1.3rem;
     width: 85%;
   }
+  @media (min-width: $desktopBP) {
+    font-size: 1rem;
+    width: 90%;
+  }
 }
 
 /* A elements that don't have a class get default styles */

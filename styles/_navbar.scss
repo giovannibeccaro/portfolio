@@ -9,6 +9,9 @@ nav {
   @media (min-width: 650px) {
     margin: -0.5em -1.75em 0 -1.75em;
   }
+  @media (min-width: $desktopBP) {
+    margin: unset;
+  }
 
   ul {
     margin: 0;
