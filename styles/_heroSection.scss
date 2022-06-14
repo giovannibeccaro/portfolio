@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $desktopBP) {
-    height: 85vh;
+    height: 82vh;
     flex-direction: row;
     font-size: 1.15em;
     .desktop-hero-left {
@@ -32,37 +32,16 @@
       }
     }
   }
-  @media (min-width: $desktopBP2) {
-    font-size: 1.35em;
-    .desktop-hero-left {
-      h1 {
-        font-size: 2.75em;
-      }
-    }
-  }
-  @media (min-width: $desktopBP3) {
-    font-size: 1.45em;
-    .desktop-hero-left {
-      h1 {
-        font-size: 3em;
-      }
-    }
-  }
   @media (min-width: $desktopBP4) {
-    font-size: 1.6em;
+    font-size: 1.15em;
     .desktop-hero-left {
       h1 {
-        font-size: 3.35em;
+        font-size: 2.6em;
       }
     }
   }
   @media (min-width: $desktopBP5) {
-    font-size: 1.8em;
-    .desktop-hero-left {
-      h1 {
-        font-size: 3.65em;
-      }
-    }
+    font-size: 1.25em;
   }
   @media (min-width: $desktopBP6) {
     font-size: 1.15vw;
@@ -89,6 +68,9 @@
     @media (min-width: $desktopBP) {
       margin-left: 10vw;
     }
+    a {
+      margin-top: 3.35em;
+    }
   }
 }
 
@@ -99,13 +81,12 @@
   font-weight: 700;
   padding: 0.75em 2.25em;
   margin-inline: auto;
-  margin-top: 3.25em;
   line-height: 1;
   @include hoverEffect;
 
   @media (min-width: $desktopBP) {
     margin-right: auto;
-    font-size: 1.2em;
+    font-size: 1.05em;
   }
 }
 
@@ -129,6 +110,26 @@
   }
   @media (min-width: $desktopBP) {
     width: 22px;
+    &::after {
+      content: "Scroll!";
+      opacity: 0;
+      background-color: $accentColor80;
+      padding: 0.5em 1em;
+      font-size: 1.5rem;
+      color: white;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition-delay: 50ms;
+      transition-duration: 300ms;
+      pointer-events: none;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
   }
   @media (min-width: $desktopBP3) {
     width: 28px;
@@ -149,6 +150,18 @@
     right: -25%;
     top: 20vh;
   }
+}
+
+.hero-vector {
+  @media (max-width: $desktopBP) {
+    display: none;
+  }
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 70vw;
 }
 
 @keyframes scrollCircle {

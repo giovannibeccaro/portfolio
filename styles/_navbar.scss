@@ -52,24 +52,108 @@ nav {
       a {
         color: white;
       }
-      &::before {
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        left: calc(-100% - 0.25em);
-        transform: translateY(-50%);
-        transition-duration: 300ms;
-        pointer-events: none;
-      }
-      &:hover {
-        transform: scale(1.05);
+      @media (max-width: $desktopBP) {
         &::before {
-          top: 100%;
-          left: 0;
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          position: absolute;
+          top: 50%;
+          left: calc(-100% - 0.25em);
+          transform: translateY(-50%);
+          transition-duration: 300ms;
+          pointer-events: none;
         }
+        &:hover {
+          transform: scale(1.05);
+          &::before {
+            top: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $desktopBP) {
+      position: static;
+      width: 100%;
+      height: unset;
+      background-color: unset;
+      color: $accentColor;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 2em;
+      align-items: center;
+      padding-right: unset;
+      li {
+        color: $accentColor80;
+        font-size: 1rem;
+        &.nav-link {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $accentColor;
+            height: 0.25rem;
+            border-radius: 3px;
+            width: 0;
+            transition-duration: 300ms;
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+          &.active {
+            &::before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              top: -3px;
+              transform: translateX(-50%);
+              background-color: $accentColor;
+              height: 0.25rem;
+              border-radius: 3px;
+              width: 100%;
+              transition-duration: 300ms;
+              transition-delay: 500ms;
+            }
+          }
+        }
+        a {
+          color: $accentColor80;
+          transition-duration: 300ms;
+        }
+        &:hover {
+          a {
+            color: $accentColor;
+          }
+        }
+        &.theme-switch {
+          color: $accentColor;
+        }
+        @media (min-width: $desktopBP3) {
+          font-size: 1.15rem;
+        }
+        @media (min-width: $desktopBP5) {
+          font-size: 1.35rem;
+        }
+        @media (min-width: $desktopBP6) {
+          font-size: 1.75rem;
+        }
+      }
+
+      &.not-active {
+        opacity: unset;
+        transform: unset;
+      }
+      &.active {
+        opacity: unset;
+        transform: unset;
       }
     }
   }
@@ -77,6 +161,9 @@ nav {
 
 .logo {
   width: 12em;
+  margin-top: -0.25em;
+  z-index: 1;
+  cursor: pointer;
   @media (min-width: 390px) {
     width: 13.9em;
   }
@@ -84,6 +171,15 @@ nav {
     width: 15em;
   }
   @media (min-width: 650px) {
+    width: 17em;
+  }
+  @media (min-width: $desktopBP) {
+    width: 13em;
+  }
+  @media (min-width: $desktopBP3) {
+    width: 15em;
+  }
+  @media (min-width: $desktopBP5) {
     width: 17em;
   }
 }
@@ -112,5 +208,8 @@ nav {
   @media (min-width: 650px) {
     font-size: 3.5em;
     margin-top: 0.5rem;
+  }
+  @media (min-width: $desktopBP) {
+    display: none;
   }
 }
