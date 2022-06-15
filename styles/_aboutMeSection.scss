@@ -3,25 +3,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktopBP) {
+    width: 70%;
+    margin-inline: auto;
+  }
 }
 
 .about-me-paragraphs {
   display: flex;
   flex-direction: column;
   gap: 3em;
-}
 
-article {
-  h4 {
-    font-size: 1em;
-    margin-bottom: 0.5em;
+  article {
+    h4 {
+      font-size: 1em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 0.85em;
+      color: $textColor;
+      b {
+        font-weight: 600;
+        color: hsl(0, 0%, 28%);
+      }
+    }
   }
-  p {
-    font-size: 0.85em;
-    color: $textColor;
-    b {
-      font-weight: 600;
-      color: hsl(0, 0%, 28%);
+  @media (min-width: $desktopBP) {
+    flex-direction: row;
+    text-align: center;
+    article:nth-child(1) {
+      flex: 0 0 38%;
     }
   }
 }
