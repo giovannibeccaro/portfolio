@@ -53,7 +53,7 @@ const SkillsSection = () => {
           <p>GIT</p>
         </div>
         <div
-          className="skills-icon-box"
+          className="skills-icon-box sass"
           data-aos="fade-zoom-in"
           data-aos-duration="1000"
           data-aos-delay="200"
@@ -107,7 +107,7 @@ const SkillsSection = () => {
           <p>Photoshop</p>
         </div>
         <div
-          className="skills-icon-box"
+          className="skills-icon-box i18n"
           data-aos="fade-zoom-in"
           data-aos-duration="1000"
           data-aos-delay="650"

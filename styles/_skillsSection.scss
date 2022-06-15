@@ -26,7 +26,10 @@
     grid-template-columns: repeat(3, 166px);
   }
   @media (min-width: 780px) {
-    grid-template-columns: repeat(3, 180x);
+    grid-template-columns: repeat(3, 180px);
+  }
+  @media (min-width: $desktopBP) {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -39,7 +42,6 @@
   justify-content: center;
   padding: 1.25em;
   gap: 0.5em;
-  transition-duration: 80ms;
   color: $accentColor80;
 
   &::before {
@@ -58,6 +60,9 @@
     }
     @media (min-width: 780px) {
       top: 15px;
+    }
+    @media (min-width: $desktopBP) {
+      top: 10%;
     }
   }
   &::after {
@@ -79,6 +84,22 @@
   &.graphql::after,
   &.material-ui::after {
     content: unset;
+  }
+  @media (min-width: $desktopBP) {
+    &.nextjs::before,
+    &.firebase::before,
+    &.figma::before,
+    &.material-ui::before {
+      content: "";
+    }
+    &.photoshop::before,
+    &.sass::before {
+      content: unset;
+    }
+    &.photoshop::after,
+    &.i18n::after {
+      content: unset;
+    }
   }
   p {
     font-size: 0.75em;
