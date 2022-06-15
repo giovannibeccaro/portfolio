@@ -141,6 +141,11 @@ button:hover {
   padding-top: 3.5rem;
   margin-block: 3.5em 3em;
   margin-inline: auto;
+  &.projects {
+    @media (min-width: $desktopBP) {
+      margin-block: 8em;
+    }
+  }
   &.projects::before {
     content: "My Projects";
   }

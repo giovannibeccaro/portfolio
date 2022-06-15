@@ -25,34 +25,35 @@
     gap: max(5%, 10px);
     white-space: nowrap;
     margin-bottom: 3.5em;
-
-    button {
-      display: flex;
-      gap: 0.35em;
-      padding: 0.5em 0.85em;
-      align-items: center;
-      line-height: 1;
-      border-radius: 5em;
-      border: unset;
-      font-weight: 600;
-      font-size: 0.9em;
-    }
-
-    .btn-icon {
-      font-size: 1.1rem;
-    }
-
-    .github-btn {
-      background-color: $accentColor;
-      color: white;
-      border: 1px solid $accentColor;
-    }
-    .live-website-btn {
-      background-color: unset;
-      border: 1px solid $accentColor;
-      color: $accentColor;
-    }
   }
+
+  button {
+    display: flex;
+    gap: 0.35em;
+    padding: 0.5em 0.85em;
+    align-items: center;
+    line-height: 1;
+    border-radius: 5em;
+    border: unset;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
+  }
+
+  .github-btn {
+    background-color: $accentColor;
+    color: white;
+    border: 1px solid $accentColor;
+  }
+  .live-website-btn {
+    background-color: unset;
+    border: 1px solid $accentColor;
+    color: $accentColor;
+  }
+
   @media (min-width: $desktopBP) {
     width: 90%;
     margin-inline: auto;
@@ -62,15 +63,21 @@
       font-weight: 700;
       margin-bottom: 0.39em;
       font-size: 1.3em;
+      @media (min-width: $desktopBP) {
+        color: white;
+      }
     }
     h4 {
       text-align: left;
       font-weight: 700;
       margin-bottom: 1.25em;
       font-size: 0.9em;
+      @media (min-width: $desktopBP) {
+        color: white;
+      }
     }
     .btns-section {
-      margin-block: 1em 0;
+      display: none;
     }
   }
   @media (min-width: $desktopBP4) {
@@ -82,25 +89,133 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: $desktopBP) {
-    flex-direction: row;
-    width: 100%;
-    gap: 3em;
-    align-items: flex-start;
-    margin-bottom: 8em;
-    &.reverse {
-      flex-direction: row-reverse;
-    }
-  }
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
+  @media (min-width: $desktopBP) {
+    width: 80%;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transition-duration: 300ms;
+    align-items: center;
+    justify-content: center;
+
+    &.lcdg {
+      h3,
+      h4,
+      b,
+      .project-description {
+        color: $accentColor;
+      }
+    }
+  }
+  @media (min-width: $desktopBP6) {
+    font-size: 1.5em;
+  }
+}
+
+.btns-section-desktop {
+  display: none;
+  @media (min-width: $desktopBP) {
+    display: flex;
+    transition-duration: 300ms;
+    z-index: 100000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    .live-website-btn {
+      transition-duration: 1100ms;
+      color: white;
+      border-color: white;
+    }
+    .github-btn {
+      transition-duration: 1100ms;
+      color: $accentColor;
+      background-color: white;
+      border-color: white;
+    }
+  }
 }
 
 .screenshot {
-  flex: 0 0 50%;
+  @media (min-width: $desktopBP) {
+    margin-bottom: 5em;
+    width: 70%;
+    position: relative;
+    transition-duration: 700ms;
+    clip-path: inset(100%);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition-duration: 750ms;
+      pointer-events: none;
+      z-index: 1;
+      background-color: hsl(358, 46%, 46%);
+    }
+    &.bookmanager::after {
+      background-color: hsl(214, 51%, 29%);
+    }
+    &.lcdg::after {
+      background-color: hsl(41, 59%, 76%);
+    }
+    &:hover {
+      transform: scale(1.3);
+      margin-block: 7em 10em;
+      & + .project-info {
+        transition-property: opacity;
+        transition-delay: 700ms;
+        opacity: 1;
+        padding-top: 7em;
+      }
+      & .btns-section-desktop {
+        transition-property: opacity;
+        transition-delay: 700ms;
+        opacity: 1;
+        transition-duration: 300ms;
+        .live-website-btn {
+          transition-delay: 700ms;
+          transform: translate(-2em, -2.5em);
+          transition-duration: 300ms;
+        }
+        .github-btn {
+          transition-delay: 700ms;
+          transform: translate(2em, -2.5em);
+          transition-duration: 300ms;
+        }
+      }
+      &::after {
+        transform: translateX(-50%) translateY(100%);
+      }
+    }
+    &.lcdg {
+      .btns-section-desktop {
+        .live-website-btn {
+          transition-duration: 300ms;
+          color: $accentColor;
+          border-color: $accentColor;
+        }
+        .github-btn {
+          transition-duration: 300;
+          color: white;
+          background-color: $accentColor;
+          border-color: $accentColor;
+        }
+      }
+    }
+  }
 }
 
 .project-description {
@@ -109,21 +224,13 @@
   margin-right: auto;
   @media (min-width: $desktopBP) {
     margin-bottom: 0.15em;
-    font-size: 1em;
+    font-size: 1.1em;
+    color: white;
+    b {
+      color: white;
+    }
     &.main {
       margin-bottom: 1.25em;
     }
-  }
-  @media (min-width: $desktopBP2) {
-    font-size: 0.95em;
-  }
-  @media (min-width: $desktopBP3) {
-    font-size: 0.9em;
-  }
-  @media (min-width: $desktopBP4) {
-    font-size: 0.8em;
-  }
-  @media (min-width: $desktopBP5) {
-    font-size: 0.9em;
   }
 }
