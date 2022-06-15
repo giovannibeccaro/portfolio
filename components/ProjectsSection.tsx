@@ -1,30 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 const ProjectsSection = () => {
-  const projectOneRef = useRef<HTMLInputElement>(null);
-  const projectTwoRef = useRef<HTMLInputElement>(null);
-  const projectThreeRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {}, []);
-
   return (
-    <section
-      className="projects-section"
-      onScroll={() => {
-        console.log("pog");
-
-        projectTwoRef.current?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }}
-    >
+    <section className="projects-section">
       <h2 className="section-heading projects" id="projects">
         My Projects
       </h2>
       <article className="single-project" data-aos="fade-up">
-        <div className="screenshot" ref={projectOneRef}>
+        <div className="screenshot">
           <Image
             src="/screen.png"
             alt="Pomodoro Timer"

@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
 .projects-section {
   display: flex;
   flex-direction: column;
@@ -73,7 +75,7 @@
       margin-bottom: 1.25em;
       font-size: 0.9em;
       @media (min-width: $desktopBP) {
-        color: white;
+        color: rgba(250, 250, 250, 0.9);
       }
     }
     .btns-section {
@@ -104,16 +106,27 @@
     justify-content: center;
 
     &.lcdg {
-      h3,
+      h3 {
+        color: $accentColor;
+      }
       h4,
       b,
       .project-description {
-        color: $accentColor;
+        color: $accentColor80;
       }
     }
   }
+  @media (min-width: $desktopBP3) {
+    font-size: 1.05em;
+  }
+  @media (min-width: $desktopBP4) {
+    font-size: 1.1em;
+  }
+  @media (min-width: $desktopBP5) {
+    font-size: 1.15em;
+  }
   @media (min-width: $desktopBP6) {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
@@ -127,7 +140,6 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-
     opacity: 0;
 
     .live-website-btn {
@@ -144,8 +156,8 @@
   }
 }
 
-.screenshot {
-  @media (min-width: $desktopBP) {
+@media (min-width: $desktopBP) {
+  .screenshot {
     margin-bottom: 5em;
     width: 70%;
     position: relative;
@@ -156,14 +168,29 @@
       width: 100%;
       height: 100%;
       position: absolute;
-
       bottom: 100%;
       left: 50%;
       transform: translateX(-50%);
       transition-duration: 750ms;
       pointer-events: none;
-      z-index: 1;
+      z-index: 2;
       background-color: hsl(358, 46%, 46%);
+    }
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.5em;
+      content: "\f103";
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      bottom: 7.5%;
+      position: absolute;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      animation: bounce 10000ms ease-in-out infinite;
+      color: white;
     }
     &.bookmanager::after {
       background-color: hsl(214, 51%, 29%);
@@ -172,13 +199,13 @@
       background-color: hsl(41, 59%, 76%);
     }
     &:hover {
-      transform: scale(1.3);
-      margin-block: 7em 10em;
+      transform: scale(1.3) translateY(-20%);
+      margin-block: 12em 10em;
       & + .project-info {
         transition-property: opacity;
         transition-delay: 700ms;
         opacity: 1;
-        padding-top: 7em;
+        padding-top: 1.5em;
       }
       & .btns-section-desktop {
         transition-property: opacity;
@@ -199,6 +226,10 @@
       &::after {
         transform: translateX(-50%) translateY(100%);
       }
+      &::before {
+        animation: unset;
+        content: unset;
+      }
     }
     &.lcdg {
       .btns-section-desktop {
@@ -215,6 +246,9 @@
         }
       }
     }
+    &.lcdg {
+      margin-bottom: 15em;
+    }
   }
 }
 
@@ -225,12 +259,27 @@
   @media (min-width: $desktopBP) {
     margin-bottom: 0.15em;
     font-size: 1.1em;
-    color: white;
+    color: rgba(250, 250, 250, 0.9);
     b {
-      color: white;
+      color: rgba(250, 250, 250, 0.9);
     }
     &.main {
       margin-bottom: 1.25em;
     }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  10% {
+    transform: translateY(15%) translateX(-50%);
+  }
+  15% {
+    transform: translateY(15%) translateX(-50%);
+  }
+  25% {
+    transform: translateY(0) translateX(-50%);
   }
 }
