@@ -200,17 +200,18 @@ const ProjectsSection = () => {
             Static Site Generation, instead of the Client Side Rendering
             approach I used for the other two sites, and this for two reasons:
             the first one is that I wanted a fast website, and NextJS was able
-            to accomplish this, thanks to it’s built in features, especially
-            fetching at build time and Images Optimization. The second reason is
-            that a website like this needed to be as SEO friendly as possible,
-            and so Client Side Rendering was not an option. Another tool I opted
-            for is Strapi, which I useds to create a CMS interface for the site
-            admin to add new content. The admin, in fact, can add whatever
-            product he wants, as it is an extremely user friendly and efficient
-            platform. I also implemented Google Analytics, and for this reason I
-            also needed to add a cookie consent banner to make the product GDPR
-            compliant. The website is ready, but will officially launch when the
-            new collection will be released to public, in August.
+            to accomplish this, thanks to it’s built in features, like serving
+            pages at build time (good for SEO too) and Images Optimization. The
+            second reason is that a website like this needed to be as SEO
+            friendly as possible, and so Client Side Rendering was not an
+            option. Another tool I opted for is Strapi, which I useds to create
+            a CMS interface for the site admin to add new content. The admin, in
+            fact, can add whatever product he wants, as it is an extremely user
+            friendly and efficient platform. I also implemented Google
+            Analytics, and for this reason I also needed to add a cookie consent
+            banner to make the product GDPR compliant. The website is ready, but
+            will officially launch when the new collection will be released to
+            public, in August.
           </p>
           <p className="project-description">
             <b>Technologies used: </b>HTML, SASS, Typescript, React, NextJS,

@@ -60,6 +60,7 @@
     width: 90%;
     margin-inline: auto;
     font-size: 1.15rem;
+
     h3 {
       text-align: left;
       font-weight: 700;
@@ -126,7 +127,7 @@
     font-size: 1.15em;
   }
   @media (min-width: $desktopBP6) {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 }
 
@@ -160,9 +161,13 @@
   .screenshot {
     margin-bottom: 5em;
     width: 70%;
+    @media (min-width: $desktopBP6) {
+      width: 90%;
+    }
     position: relative;
     transition-duration: 700ms;
     clip-path: inset(100%);
+
     &::after {
       content: "";
       width: 100%;
@@ -206,6 +211,9 @@
         transition-delay: 700ms;
         opacity: 1;
         padding-top: 1.5em;
+        @media (min-width: $desktopBP6) {
+          padding-top: 0;
+        }
       }
       & .btns-section-desktop {
         transition-property: opacity;

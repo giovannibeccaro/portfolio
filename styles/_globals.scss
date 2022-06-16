@@ -143,7 +143,20 @@ button:hover {
   margin-inline: auto;
   &.projects {
     @media (min-width: $desktopBP) {
-      margin-block: 8em;
+      font-size: 1.75em;
+      margin-block: 6em 8em;
+    }
+    @media (min-width: $desktopBP3) {
+      font-size: 1.85em;
+    }
+    @media (min-width: $desktopBP4) {
+      font-size: 2.15em;
+    }
+    @media (min-width: $desktopBP5) {
+      font-size: 2.35em;
+    }
+    @media (min-width: $desktopBP6) {
+      font-size: 2.5em;
     }
   }
   &.projects::before {

@@ -32,9 +32,10 @@
   @media (min-width: $desktopBP) {
     flex-direction: row;
     text-align: center;
+    justify-content: center;
     gap: 6em;
-    article:nth-child(1) {
-      flex: 0 0 38%;
+    article {
+      flex: 0 0 43%;
     }
   }
 }
