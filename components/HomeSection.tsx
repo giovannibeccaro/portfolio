@@ -30,8 +30,10 @@ const HomeSection = () => {
           </div>
         </div>
 
-        <div className="hero-illustration" data-aos="fade-up">
-          <HeroIllustration />
+        <div className="overflow-hidden">
+          <div className="hero-illustration" data-aos="fade-up">
+            <HeroIllustration />
+          </div>
         </div>
       </section>
       <div className="hero-vector">
