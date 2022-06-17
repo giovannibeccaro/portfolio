@@ -145,15 +145,6 @@
   }
 }
 
-@media (min-width: $desktopBP) {
-  .overflow-hidden {
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    overflow-x: hidden;
-  }
-}
-
 .hero-illustration {
   width: 102vw;
   @media (min-width: $desktopBP) {

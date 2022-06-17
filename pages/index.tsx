@@ -30,11 +30,11 @@ const MainPage: NextPage = () => {
   return (
     <>
       <Navbar theme={resolvedTheme} setTheme={setTheme} />
-      <HomeSection theme={theme} />
+      <HomeSection />
       <ProjectsSection />
       <SkillsSection />
       <AboutMeSection />
-      <ContactMeSection theme={theme} />
+      <ContactMeSection />
       <footer>
         <p>Designed and coded by Giovanni Beccaro</p>
       </footer>
