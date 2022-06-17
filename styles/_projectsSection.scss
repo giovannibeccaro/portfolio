@@ -166,8 +166,9 @@
     }
     position: relative;
     transition-duration: 700ms;
-    clip-path: inset(100%);
-
+    clip-path: inset(0%);
+    -webkit-clip-path: inset(0%);
+    //TODO la grandezza del font è diversa in chrome e fireefox
     &::after {
       content: "";
       width: 100%;

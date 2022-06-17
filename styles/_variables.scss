@@ -41,7 +41,7 @@
   --contIlluPages: #d5d5d5;
   --contIlluDarker: #202020;
   --contIlluScreen: #111111;
-  --contIlluShirt: #eeeeee;
+  --contIlluShirt: #dbdbdb;
   --contIlluStand: #222222;
   --contIlluSeat: #5e5e5e;
   --heroIlluPcOut: #cfcfcf;
@@ -68,7 +68,8 @@ $desktopBP5: 2330px;
 $desktopBP6: 2850px;
 
 @mixin hoverEffect {
-  clip-path: inset(100%);
+  clip-path: inset(0%);
+  -webkit-clip-path: inset(0%);
   position: relative;
   &::before {
     content: "";
