@@ -8,8 +8,11 @@ import ContactMeSection from "../components/ContactMeSection";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTheme } from "next-themes";
 
 const MainPage: NextPage = () => {
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
   useEffect(() => {
     const timer = window.setTimeout(function () {
       window.scrollTo(0, 0);
@@ -25,17 +28,17 @@ const MainPage: NextPage = () => {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <HomeSection />
+    <div>
+      <Navbar theme={resolvedTheme} setTheme={setTheme} />
+      <HomeSection theme={theme} />
       <ProjectsSection />
       <SkillsSection />
       <AboutMeSection />
-      <ContactMeSection />
+      <ContactMeSection theme={theme} />
       <footer>
         <p>Designed and coded by Giovanni Beccaro</p>
       </footer>
-    </>
+    </div>
   );
 };
 

@@ -22,10 +22,10 @@
     }
     p {
       font-size: 0.85em;
-      color: $textColor;
+      color: var(--textColor);
       b {
         font-weight: 600;
-        color: hsl(0, 0%, 28%);
+        color: var(--aboutBold);
       }
     }
   }

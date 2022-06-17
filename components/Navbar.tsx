@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Logo from "./svgs/Logo";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 
-const Navbar = () => {
+type Props = {
+  theme: string | undefined;
+  setTheme: (theme: string) => void;
+};
+
+const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -24,12 +28,21 @@ const Navbar = () => {
   function hoverOff() {
     setIsOnLink(false);
   }
+  console.log(theme);
+
+  function switchTheme() {
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("light");
+    }
+  }
 
   return (
     <header>
       <nav>
         <span className="logo" onClick={() => window.location.reload()}>
-          <Logo darktheme={false} />
+          <Logo darktheme={theme === "dark" ? true : false} />
         </span>
 
         <button
@@ -78,7 +91,13 @@ const Navbar = () => {
             <a href="#contact-me">contact me</a>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>En / It</li>
-          <li className="theme-switch" onClick={() => setIsMenuOpen(false)}>
+          <li
+            className="theme-switch"
+            onClick={() => {
+              setIsMenuOpen(false);
+              switchTheme();
+            }}
+          >
             <Icon icon="ic:baseline-dark-mode"></Icon>
           </li>
         </ul>

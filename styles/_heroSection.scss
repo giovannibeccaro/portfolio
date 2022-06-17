@@ -78,9 +78,9 @@
 }
 
 .hero-btn {
-  background-color: $accentColor;
+  background-color: var(--accentColor);
   border: unset;
-  color: white;
+  color: var(--bgColor);
   font-weight: 700;
   padding: 0.75em 2.25em;
   margin-inline: auto;
@@ -116,10 +116,10 @@
     &::after {
       content: "Scroll!";
       opacity: 0;
-      background-color: $accentColor80;
+      background-color: var(--accentColor80);
       padding: 0.5em 1em;
       font-size: 1.5rem;
-      color: white;
+      color: var(--inputColor);
       position: absolute;
       top: 120%;
       left: 50%;

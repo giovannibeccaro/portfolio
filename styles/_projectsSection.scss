@@ -18,7 +18,7 @@
     line-height: 1.25;
     margin-bottom: 2.25em;
     text-align: center;
-    color: $accentColor80;
+    color: var(--accentColor80);
   }
 
   .btns-section {
@@ -46,14 +46,14 @@
   }
 
   .github-btn {
-    background-color: $accentColor;
-    color: white;
-    border: 1px solid $accentColor;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    border: 1px solid var(--accentColor);
   }
   .live-website-btn {
     background-color: unset;
-    border: 1px solid $accentColor;
-    color: $accentColor;
+    border: 1px solid var(--accentColor);
+    color: var(--accentColor);
   }
 
   @media (min-width: $desktopBP) {
@@ -113,7 +113,7 @@
       h4,
       b,
       .project-description {
-        color: $accentColor80;
+        color: var(--accentColor80);
       }
     }
   }

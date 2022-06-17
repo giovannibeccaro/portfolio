@@ -20,9 +20,10 @@
       position: relative;
       outline-color: hsla(0, 0%, 19%, 0);
       transition: outline-color 150ms;
+      background-color: var(--inputColor);
 
       &:focus-within {
-        outline-color: $accentColor;
+        outline-color: var(--accentColor);
         outline: 2px solid;
       }
     }
@@ -37,9 +38,9 @@
     }
 
     button {
-      background-color: $accentColor;
+      background-color: var(--accentColor);
       border: unset;
-      color: white;
+      color: var(--bgColor);
       font-weight: 700;
       font-size: 0.85em;
       padding: 0.65em 1.5em;
@@ -91,6 +92,7 @@
       justify-self: center;
       align-self: center;
       grid-area: 3 / 1 / 4 / 2;
+      margin-top: 0;
       p {
         display: none;
       }
@@ -108,8 +110,8 @@
 }
 
 .download-link {
-  background-color: $accentColor;
-  color: white;
+  background-color: var(--accentColor);
+  color: var(--bgColor);
   font-weight: 500;
   border: unset;
   padding: 0.75em 1.25em;
@@ -140,7 +142,7 @@
     align-items: center;
     gap: 0.5em;
     font-size: 0.9em;
-    color: $accentColor;
+    color: var(--accentColor);
 
     .icon-link {
       font-size: 2em;

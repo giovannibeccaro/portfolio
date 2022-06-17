@@ -42,14 +42,14 @@
   justify-content: center;
   padding: 1.25em;
   gap: 0.5em;
-  color: $accentColor80;
+  color: var(--accentColor80);
 
   &::before {
     content: "";
     position: absolute;
     height: 80%;
     width: 1px;
-    background-color: $accentColor7;
+    background-color: var(--skillBarsColor);
     top: 10px;
     left: 0;
     @media (min-width: 500px) {
@@ -70,7 +70,7 @@
     position: absolute;
     height: 1px;
     width: 80%;
-    background-color: $accentColor7;
+    background-color: var(--skillBarsColor);
     bottom: 0;
   }
   &.rest::before,
@@ -108,8 +108,8 @@
   }
 
   &:hover {
-    background-color: hsl(0, 0%, 94%);
-    color: $accentColor;
+    background-color: var(--skillHoverColor);
+    color: var(--accentColor);
   }
 }
 

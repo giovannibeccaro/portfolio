@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type Props = {
   darktheme: boolean;
 };
 
 const Logo: React.FC<Props> = ({ darktheme }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <>
       <svg viewBox="0 0 182 36" fill="none" xmlns="http://www.w3.org/2000/svg">

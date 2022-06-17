@@ -80,14 +80,13 @@ nav {
       width: 100%;
       height: unset;
       background-color: unset;
-      color: $accentColor;
       flex-direction: row;
       justify-content: flex-end;
       gap: 2em;
       align-items: center;
       padding-right: unset;
       li {
-        color: $accentColor80;
+        color: var(--accentColor80);
         font-size: 1rem;
         &.nav-link {
           position: relative;
@@ -97,7 +96,7 @@ nav {
             top: -3px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: $accentColor;
+            background-color: var(--accentColor);
             height: 0.25rem;
             border-radius: 3px;
             width: 0;
@@ -115,7 +114,7 @@ nav {
               left: 50%;
               top: -3px;
               transform: translateX(-50%);
-              background-color: $accentColor;
+              background-color: var(--accentColor);
               height: 0.25rem;
               border-radius: 3px;
               width: 100%;
@@ -125,16 +124,16 @@ nav {
           }
         }
         a {
-          color: $accentColor80;
+          color: var(--accentColor80);
           transition-duration: 300ms;
         }
         &:hover {
           a {
-            color: $accentColor;
+            color: var(--accentColor);
           }
         }
         &.theme-switch {
-          color: $accentColor;
+          color: var(--accentColor);
         }
         @media (min-width: $desktopBP3) {
           font-size: 1.15rem;
@@ -197,7 +196,7 @@ nav {
     transform: rotate(180deg);
   }
   &.open {
-    color: $accentColor;
+    color: var(--accentColor);
     transform: rotate(360deg);
   }
 

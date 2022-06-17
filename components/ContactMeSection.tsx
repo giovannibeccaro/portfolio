@@ -2,7 +2,11 @@ import React from "react";
 import ContactIllustration from "./svgs/ContactIllustration";
 import { Icon } from "@iconify/react";
 
-const ContactMeSection = () => {
+type Props = {
+  theme: string | undefined;
+};
+
+const ContactMeSection: React.FC<Props> = ({ theme }) => {
   return (
     <section className="contact-me-section">
       <h2 className="section-heading contact-me" id="contact-me">
