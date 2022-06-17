@@ -28,7 +28,6 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
   function hoverOff() {
     setIsOnLink(false);
   }
-  console.log(theme);
 
   function switchTheme() {
     if (theme === "light") {

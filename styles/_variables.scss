@@ -8,6 +8,16 @@
   --inputColor: hsl(0, 0%, 100%);
   --skillHoverColor: hsl(0, 0%, 94%);
   --skillBarsColor: hsla(0, 0%, 19%, 0.07);
+  --heroVectorColor: #ededed;
+  --logoColor: #303030;
+  --logoColorBg: #f5f5f5;
+  --contIlluMain: #cccccc;
+  --contIlluPages: #f2f2f2;
+  --contIlluDarker: #303030;
+  --contIlluScreen: #ffffff;
+  --contIlluShirt: #808080;
+  --contIlluStand: #e6e6e6;
+  --contIlluSeat: #e3e3e3;
 }
 [data-theme="dark"] {
   --bgColor: hsl(0, 0%, 19%);
@@ -19,6 +29,16 @@
   --inputColor: hsl(0, 0%, 21%);
   --skillHoverColor: hsl(0, 0%, 20%);
   --skillBarsColor: hsl(0, 0%, 23%);
+  --heroVectorColor: #2c2c2c;
+  --logoColor: #f5f5f5;
+  --logoColorBg: #303030;
+  --contIlluMain: #272727;
+  --contIlluPages: #d5d5d5;
+  --contIlluDarker: #202020;
+  --contIlluScreen: #111111;
+  --contIlluShirt: #eeeeee;
+  --contIlluStand: #222222;
+  --contIlluSeat: #5e5e5e;
 }
 
 //? Colors
