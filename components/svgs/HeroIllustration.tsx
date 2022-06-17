@@ -1,10 +1,6 @@
 import React from "react";
 
-type Props = {
-  darktheme: boolean;
-};
-
-const HeroIllustration: React.FC<Props> = ({ darktheme }) => {
+const HeroIllustration = () => {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => {
     setMounted(true);
@@ -89,7 +85,7 @@ const HeroIllustration: React.FC<Props> = ({ darktheme }) => {
           <path
             d="M305.48 9.93213H105.271V122.953H305.48V9.93213Z"
             className="hero-illu-screen1"
-            fill={darktheme ? "#202020" : "white"}
+            fill="white"
           />
           <path
             d="M205.206 6.84958C206.34 6.84958 207.259 5.92956 207.259 4.79466C207.259 3.65976 206.34 2.73975 205.206 2.73975C204.072 2.73975 203.152 3.65976 203.152 4.79466C203.152 5.92956 204.072 6.84958 205.206 6.84958Z"

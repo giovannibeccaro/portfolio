@@ -7,7 +7,7 @@ type Props = {
   theme: string | undefined;
 };
 //TODO mettere i linkini dei contatti dopo aver scrollato via dal bottone contattami
-const HomeSection: React.FC<Props> = ({ theme }) => {
+const HomeSection = () => {
   return (
     <>
       <section className="hero-section">
@@ -29,17 +29,17 @@ const HomeSection: React.FC<Props> = ({ theme }) => {
               data-aos="zoom-in-up"
               data-aos-delay="300"
             >
-              <ScrollElement darktheme={theme === "dark" ? true : false} />
+              <ScrollElement />
             </div>
           </div>
         </div>
 
         <div className="hero-illustration" data-aos="fade-up">
-          <HeroIllustration darktheme={theme === "dark" ? true : false} />
+          <HeroIllustration />
         </div>
       </section>
       <div className="hero-vector">
-        <HeroVector darktheme={theme === "dark" ? true : false} />
+        <HeroVector />
       </div>
     </>
   );

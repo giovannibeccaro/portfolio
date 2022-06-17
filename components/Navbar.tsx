@@ -41,7 +41,7 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
     <header>
       <nav>
         <span className="logo" onClick={() => window.location.reload()}>
-          <Logo darktheme={theme === "dark" ? true : false} />
+          <Logo />
         </span>
 
         <button
