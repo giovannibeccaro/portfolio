@@ -28,7 +28,7 @@ const MainPage: NextPage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar theme={resolvedTheme} setTheme={setTheme} />
       <HomeSection theme={theme} />
       <ProjectsSection />
@@ -38,7 +38,7 @@ const MainPage: NextPage = () => {
       <footer>
         <p>Designed and coded by Giovanni Beccaro</p>
       </footer>
-    </div>
+    </>
   );
 };
 

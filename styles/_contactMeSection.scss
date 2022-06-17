@@ -49,7 +49,9 @@
     }
   }
 }
-
+.contacts-illustration {
+  margin-left: -13.9%;
+}
 @media (min-width: $desktopBP) {
   .contacts-desktop-grid {
     display: grid;
@@ -58,6 +60,8 @@
 
     .contacts-illustration {
       width: 125%;
+      margin-left: -3.9em;
+
       @media (min-width: $desktopBP6) {
         width: 110%;
       }

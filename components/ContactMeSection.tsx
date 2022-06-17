@@ -14,7 +14,7 @@ const ContactMeSection: React.FC<Props> = ({ theme }) => {
       </h2>
       <div className="contacts-desktop-grid">
         <div className="contacts-illustration">
-          <ContactIllustration />
+          <ContactIllustration darktheme={theme === "dark" ? true : false} />
         </div>
         <form className="form">
           <label htmlFor="name">Full name:</label>
