@@ -97,7 +97,11 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
               switchTheme();
             }}
           >
-            <Icon icon="ic:baseline-dark-mode"></Icon>
+            {theme === "light" ? (
+              <Icon icon="ic:baseline-dark-mode" />
+            ) : (
+              <Icon icon="ic:baseline-light-mode" />
+            )}
           </li>
         </ul>
       </nav>

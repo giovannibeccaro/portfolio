@@ -52,7 +52,7 @@ const ContactMeSection = () => {
           </a>
         </div>
         <a
-          href="assets/resume.pdf"
+          href="resume.pdf"
           download="giovanni-beccaro-resume.pdf"
           className="resume"
         >

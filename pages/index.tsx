@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
+import Loader from "../components/Loader";
 import HomeSection from "../components/HomeSection";
 import Navbar from "../components/Navbar";
 import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillsSection";
 import AboutMeSection from "../components/AboutMeSection";
 import ContactMeSection from "../components/ContactMeSection";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "next-themes";
 
 const MainPage: NextPage = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = window.setTimeout(function () {
@@ -27,10 +29,22 @@ const MainPage: NextPage = () => {
     };
   }, []);
 
-  return (
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 300033);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  return isLoading ? (
+    <Loader />
+  ) : (
     <>
       <Navbar theme={resolvedTheme} setTheme={setTheme} />
-      <HomeSection />
+      {isLoading ? "ciao" : <HomeSection />}
       <ProjectsSection />
       <SkillsSection />
       <AboutMeSection />

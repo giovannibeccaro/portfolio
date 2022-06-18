@@ -13,8 +13,10 @@ const SkillsSection = () => {
           data-aos-duration="800"
           data-aos-delay="100"
         >
-          <Icon className="skills-icon" icon="dashicons:rest-api" />
-          <p>Rest API</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="dashicons:rest-api" />
+            <p>Rest API</p>
+          </div>
         </div>
         <div
           className="skills-icon-box"
@@ -22,8 +24,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="350"
         >
-          <Icon className="skills-icon" icon="bxl:mongodb" />
-          <p>MongoDB</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="bxl:mongodb" />
+            <p>MongoDB</p>
+          </div>
         </div>
         <div
           className="skills-icon-box"
@@ -31,8 +35,10 @@ const SkillsSection = () => {
           data-aos-duration="800"
           data-aos-delay="150"
         >
-          <Icon className="skills-icon" icon="cib:typescript" />
-          <p>Typescript</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="cib:typescript" />
+            <p>Typescript</p>
+          </div>
         </div>
         <div
           className="skills-icon-box nextjs"
@@ -40,8 +46,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="550"
         >
-          <Icon className="skills-icon" icon="akar-icons:nextjs-fill" />
-          <p>NextJS</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="akar-icons:nextjs-fill" />
+            <p>NextJS</p>
+          </div>
         </div>
         <div
           className="skills-icon-box"
@@ -49,8 +57,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          <Icon className="skills-icon" icon="bi:git" />
-          <p>GIT</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="bi:git" />
+            <p>GIT</p>
+          </div>
         </div>
         <div
           className="skills-icon-box sass"
@@ -58,8 +68,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="200"
         >
-          <Icon className="skills-icon" icon="akar-icons:sass-fill" />
-          <p>Sass</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="akar-icons:sass-fill" />
+            <p>Sass</p>
+          </div>
         </div>
         <div
           className="skills-icon-box firebase"
@@ -67,8 +79,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="400"
         >
-          <Icon className="skills-icon" icon="bxl:firebase" />
-          <p>Firebase</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="bxl:firebase" />
+            <p>Firebase</p>
+          </div>
         </div>
         <div
           className="skills-icon-box"
@@ -76,8 +90,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="500"
         >
-          <Icon className="skills-icon" icon="teenyicons:react-outline" />
-          <p>React</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="teenyicons:react-outline" />
+            <p>React</p>
+          </div>
         </div>
         <div
           className="skills-icon-box"
@@ -85,8 +101,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="550"
         >
-          <Icon className="skills-icon" icon="simple-icons:strapi" />
-          <p>Strapi</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="simple-icons:strapi" />
+            <p>Strapi</p>
+          </div>
         </div>
         <div
           className="skills-icon-box figma"
@@ -94,8 +112,10 @@ const SkillsSection = () => {
           data-aos-duration="800"
           data-aos-delay="250"
         >
-          <Icon className="skills-icon" icon="bxl:figma" />
-          <p>Figma</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="bxl:figma" />
+            <p>Figma</p>
+          </div>
         </div>
         <div
           className="skills-icon-box photoshop"
@@ -103,8 +123,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="450"
         >
-          <Icon className="skills-icon" icon="file-icons:adobe-photoshop" />
-          <p>Photoshop</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="file-icons:adobe-photoshop" />
+            <p>Photoshop</p>
+          </div>
         </div>
         <div
           className="skills-icon-box i18n"
@@ -112,8 +134,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="650"
         >
-          <Icon className="skills-icon" icon="simple-icons:i18next" />
-          <p>i18n</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="simple-icons:i18next" />
+            <p>i18n</p>
+          </div>
         </div>
         <div
           className="skills-icon-box material-ui"
@@ -121,8 +145,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="300"
         >
-          <Icon className="skills-icon" icon="mdi:material-ui" />
-          <p>MaterialUI</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="mdi:material-ui" />
+            <p>MaterialUI</p>
+          </div>
         </div>
 
         <div
@@ -131,8 +157,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="600"
         >
-          <Icon className="skills-icon" icon="akar-icons:bootstrap-fill" />
-          <p>Bootstrap</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="akar-icons:bootstrap-fill" />
+            <p>Bootstrap</p>
+          </div>
         </div>
         <div
           className="skills-icon-box graphql"
@@ -140,8 +168,10 @@ const SkillsSection = () => {
           data-aos-duration="1000"
           data-aos-delay="800"
         >
-          <Icon className="skills-icon" icon="akar-icons:graphql-fill" />
-          <p>GraphQL</p>
+          <div className="transition-duration-skills">
+            <Icon className="skills-icon" icon="akar-icons:graphql-fill" />
+            <p>GraphQL</p>
+          </div>
         </div>
       </div>
     </section>

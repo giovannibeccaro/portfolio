@@ -9,14 +9,15 @@
     font-size: 1.25em;
     text-transform: uppercase;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
+    margin-top: 0.5em;
   }
   h4 {
     font-weight: 300;
     font-size: 0.8em;
     line-height: 1.25;
-    margin-bottom: 2.25em;
+    margin-bottom: 1.5em;
     text-align: center;
     color: var(--accentColor80);
   }
@@ -42,7 +43,7 @@
   }
 
   .btn-icon {
-    font-size: 1.1rem;
+    font-size: 1.1em;
   }
 
   .github-btn {
@@ -59,7 +60,10 @@
   @media (min-width: $desktopBP) {
     width: 90%;
     margin-inline: auto;
-    font-size: 1.15rem;
+    font-size: 0.65em;
+    @media (min-width: $desktopBP3) {
+      font-size: 0.7em;
+    }
 
     h3 {
       text-align: left;
@@ -127,7 +131,8 @@
     font-size: 1.15em;
   }
   @media (min-width: $desktopBP6) {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    width: 95%;
   }
 }
 
@@ -168,7 +173,6 @@
     transition-duration: 700ms;
     clip-path: inset(0%);
     -webkit-clip-path: inset(0%);
-    //TODO la grandezza del font è diversa in chrome e fireefox
     &::after {
       content: "";
       width: 100%;
