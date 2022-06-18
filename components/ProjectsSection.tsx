@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       <article className="single-project" data-aos="fade-up">
         <div className="screenshot">
           <Image
-            src="/screen.png"
+            src="/pomodoro-timer.webp"
             alt="Pomodoro Timer"
             width={1920}
             height={1080}
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
       <article data-aos="fade-up" className="single-project ">
         <div className="screenshot bookmanager">
           <Image
-            src="/screen.png"
+            src="/bookmanager.webp"
             alt="BookManager"
             width={1920}
             height={1080}
@@ -167,7 +167,7 @@ const ProjectsSection = () => {
       <article data-aos="fade-up" className="single-project">
         <div className="screenshot lcdg">
           <Image
-            src="/screen.png"
+            src="/lcdg.webp"
             alt="Le Chicche di Girotondo"
             width={1920}
             height={1080}

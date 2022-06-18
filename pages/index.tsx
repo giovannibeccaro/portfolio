@@ -32,7 +32,7 @@ const MainPage: NextPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 300033);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);

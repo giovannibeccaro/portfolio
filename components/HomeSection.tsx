@@ -7,6 +7,7 @@ type Props = {
   theme: string | undefined;
 };
 //TODO mettere i linkini dei contatti dopo aver scrollato via dal bottone contattami
+
 const HomeSection = () => {
   return (
     <>
@@ -18,7 +19,7 @@ const HomeSection = () => {
           <div className="desktop-hero-bottom-left">
             <a href="#contact-me">
               <button data-aos="fade-up" className="hero-btn">
-                CONTACT ME
+                Contact me
               </button>
             </a>
             <p data-aos="zoom-in-up" data-aos-delay="200">
