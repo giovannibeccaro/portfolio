@@ -17,14 +17,22 @@ const ProjectsSection = () => {
             height={1080}
           />
           <div className="btns-section-desktop">
-            <a href="#">
+            <a
+              href="https://pomodorotimer0.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/book-manager"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />
@@ -67,14 +75,22 @@ const ProjectsSection = () => {
             data-aos="zoom-in-up"
             data-aos-duration="350"
           >
-            <a href="#">
+            <a
+              href="https://pomodorotimer0.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/book-manager"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />
@@ -93,14 +109,22 @@ const ProjectsSection = () => {
             height={1080}
           />
           <div className="btns-section-desktop">
-            <a href="#">
+            <a
+              href="https://bookmanager-giovannibeccaro.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/book-manager"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />
@@ -147,14 +171,22 @@ const ProjectsSection = () => {
             data-aos="zoom-in-up"
             data-aos-duration="350"
           >
-            <a href="#">
+            <a
+              href="https://bookmanager-giovannibeccaro.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/book-manager"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />
@@ -173,14 +205,22 @@ const ProjectsSection = () => {
             height={1080}
           />
           <div className="btns-section-desktop">
-            <a href="#">
+            <a
+              href="https://lcdg.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/LCDG"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />
@@ -228,14 +268,22 @@ const ProjectsSection = () => {
             data-aos="zoom-in-up"
             data-aos-duration="350"
           >
-            <a href="#">
+            <a
+              href="https://lcdg.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="live-website-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:monitor-arrow" /> Live
                 Website
               </button>
             </a>
-            <a href="#">
+            <a
+              href="https://github.com/giovannibeccaro/LCDG"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="github-btn">
                 {" "}
                 <Icon className="btn-icon" icon="charm:github" />

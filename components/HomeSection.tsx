@@ -19,7 +19,7 @@ const HomeSection = () => {
           <div className="desktop-hero-bottom-left">
             <a href="#contact-me">
               <button data-aos="fade-up" className="hero-btn">
-                Contact me
+                CONTACT ME
               </button>
             </a>
             <p data-aos="zoom-in-up" data-aos-delay="200">
