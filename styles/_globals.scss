@@ -159,19 +159,8 @@ button:hover {
       font-size: 2.5em;
     }
   }
-  &.projects::before {
-    content: "My Projects";
-  }
-  &.skills::before {
-    content: "My Skills";
-  }
-  &.about-me::before {
-    content: "About Me";
-  }
-  &.contact-me::before {
-    content: "Contact Me";
-  }
   &::before {
+    content: attr(data-content);
     padding-top: 3.5rem;
     position: absolute;
     font-size: 2em;

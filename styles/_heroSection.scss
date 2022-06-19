@@ -86,6 +86,7 @@
   padding: 0.75em 2.25em;
   margin-inline: auto;
   line-height: 1;
+  text-transform: uppercase;
   @include hoverEffect;
 
   @media (min-width: $desktopBP) {
@@ -115,11 +116,12 @@
   @media (min-width: $desktopBP) {
     width: 22px;
     &::after {
-      content: "Scroll!";
+      content: attr(data-content);
       opacity: 0;
       background-color: var(--accentColor80);
       padding: 0.5em 1em;
-      font-size: 1.5rem;
+      font-size: 1rem;
+      text-align: center;
       color: var(--inputColor);
       position: absolute;
       top: 120%;

@@ -49,6 +49,10 @@ nav {
       position: relative;
       transition: transform 150ms;
       cursor: pointer;
+      span.active {
+        font-weight: 700;
+        color: var(--accentColor);
+      }
       a {
         color: white;
       }
@@ -108,6 +112,7 @@ nav {
             }
           }
           &.active {
+            color: var(--accentColor);
             &::before {
               content: "";
               position: absolute;
@@ -124,7 +129,7 @@ nav {
           }
         }
         a {
-          color: var(--accentColor80);
+          color: inherit;
           transition-duration: 300ms;
         }
         &:hover {

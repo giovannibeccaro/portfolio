@@ -1,10 +1,18 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { useIntl } from "react-intl";
+
 const SkillsSection = () => {
+  const intl = useIntl();
+
   return (
     <section className="skills-section">
-      <h2 className="section-heading skills" id="skills">
-        My Skills
+      <h2
+        className="section-heading skills"
+        data-content={intl.formatMessage({ id: "mySkills" })}
+        id="skills"
+      >
+        {intl.formatMessage({ id: "mySkills" })}
       </h2>
       <div className="skills-grid">
         <div

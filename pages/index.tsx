@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Loader from "../components/Loader";
 import HomeSection from "../components/HomeSection";
 import Navbar from "../components/Navbar";
@@ -10,9 +11,16 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/router";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const MainPage: NextPage = () => {
+  // Dark theme stuff
   const { setTheme, resolvedTheme } = useTheme();
+  // Localization stuff
+  const { locales, locale } = useRouter();
+  const intl = useIntl();
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -39,19 +47,42 @@ const MainPage: NextPage = () => {
     };
   }, []);
 
-  return isLoading ? (
-    <Loader />
-  ) : (
+  return (
     <>
-      <Navbar theme={resolvedTheme} setTheme={setTheme} />
-      {isLoading ? "ciao" : <HomeSection />}
-      <ProjectsSection />
-      <SkillsSection />
-      <AboutMeSection />
-      <ContactMeSection />
-      <footer>
-        <p>Designed and coded by Giovanni Beccaro</p>
-      </footer>
+      <Head>
+        <title>Giovanni Beccaro</title>
+        <link
+          rel="alternate"
+          href="http://giovannibeccaro.com"
+          hrefLang="x-default"
+        />
+        <link rel="alternate" href="http://giovannibeccaro.com" hrefLang="en" />
+        <link
+          rel="alternate"
+          href="http://giovannibeccaro.com/it"
+          hrefLang="it"
+        />
+      </Head>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar
+            theme={resolvedTheme}
+            setTheme={setTheme}
+            locales={locales}
+            locale={locale}
+          />
+          {isLoading ? "ciao" : <HomeSection />}
+          <ProjectsSection />
+          <SkillsSection />
+          <AboutMeSection />
+          <ContactMeSection />
+          <footer>
+            <p>{intl.formatMessage({ id: "footer" })}</p>
+          </footer>
+        </>
+      )}
     </>
   );
 };

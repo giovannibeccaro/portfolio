@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Logo from "./svgs/Logo";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
+import { useIntl } from "react-intl";
 
 type Props = {
   theme: string | undefined;
   setTheme: (theme: string) => void;
+  locales: string[] | undefined;
+  locale: string | undefined;
 };
 
-const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
+const Navbar: React.FC<Props> = ({ theme, setTheme, locales, locale }) => {
+  const intl = useIntl();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -63,7 +68,7 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
             onMouseLeave={hoverOff}
             onClick={() => setIsMenuOpen(false)}
           >
-            <a href="#projects">Projects</a>
+            <a href="#projects">{intl.formatMessage({ id: "projects" })}</a>
           </li>
           <li
             className="nav-link"
@@ -71,7 +76,7 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
             onMouseLeave={hoverOff}
             onClick={() => setIsMenuOpen(false)}
           >
-            <a href="#skills">skills</a>
+            <a href="#skills">{intl.formatMessage({ id: "skills" })}</a>
           </li>
           <li
             className="nav-link"
@@ -79,7 +84,7 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
             onMouseLeave={hoverOff}
             onClick={() => setIsMenuOpen(false)}
           >
-            <a href="#about-me">about me</a>
+            <a href="#about-me">{intl.formatMessage({ id: "aboutMe" })}</a>
           </li>
           <li
             className="nav-link"
@@ -87,9 +92,23 @@ const Navbar: React.FC<Props> = ({ theme, setTheme }) => {
             onMouseLeave={hoverOff}
             onClick={() => setIsMenuOpen(false)}
           >
-            <a href="#contact-me">contact me</a>
+            <a href="#contact-me">{intl.formatMessage({ id: "contactMe" })}</a>
           </li>
-          <li onClick={() => setIsMenuOpen(false)}>En / It</li>
+          {locales && (
+            <li onClick={() => setIsMenuOpen(false)}>
+              <span className={locale === "en" ? "active" : ""}>
+                <Link key={locales[0]} href="/" locale={locales[0]}>
+                  {locales[0]}
+                </Link>
+              </span>{" "}
+              /{" "}
+              <span className={locale === "it" ? "active" : ""}>
+                <Link key={locales[1]} href="/" locale={locales[1]}>
+                  {locales[1]}
+                </Link>
+              </span>
+            </li>
+          )}
           <li
             className="theme-switch"
             onClick={() => {
