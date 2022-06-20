@@ -35,6 +35,8 @@ const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
     e.preventDefault();
     console.log("pog");
 
+    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
+
     if (form.current && SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
       console.log("some");
 
