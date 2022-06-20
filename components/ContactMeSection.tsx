@@ -33,23 +33,14 @@ const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
 
   function sendMail(e: any) {
     e.preventDefault();
-    console.log("pog");
-
-    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
 
     if (form.current && SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
-      console.log("some");
-
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         () => {
-          console.log(1);
-
           alert(alertYep);
           window.location.reload();
         },
         () => {
-          console.log(2);
-
           alert(alertNope);
         }
       );
