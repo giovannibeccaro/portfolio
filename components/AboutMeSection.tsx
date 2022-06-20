@@ -24,7 +24,7 @@ const AboutMeSection = () => {
           </p>
         </article>
         <article>
-          <h4 data-aos="fade-up">How do I work?</h4>
+          <h4 data-aos="fade-up">{intl.formatMessage({ id: "howDoIWork" })}</h4>
           <p data-aos="fade-up">
             <FormattedMessage
               id="howDoIWorkPar"

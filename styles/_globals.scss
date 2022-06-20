@@ -163,7 +163,7 @@ button:hover {
     content: attr(data-content);
     padding-top: 3.5rem;
     position: absolute;
-    font-size: 2em;
+    font-size: 1.35em;
     text-transform: uppercase;
     top: 50%;
     left: 50%;
@@ -180,7 +180,7 @@ button:hover {
   justify-content: center;
   margin-block: auto;
   width: inherit;
-  // 3em is body padding top and bottom
+  // 3em is body padding top and bottom1.
   height: calc(100vh - 3em);
   h2 {
     font-weight: 300;

@@ -1,10 +1,52 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ContactIllustration from "./svgs/ContactIllustration";
 import { Icon } from "@iconify/react";
 import { useIntl } from "react-intl";
+import useOnScreen from "./hooks/useOnScreen";
+import emailjs from "@emailjs/browser";
 
-const ContactMeSection = () => {
+type Props = {
+  setIsHeroBtnVisible: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
   const intl = useIntl();
+  const alertNope = intl.formatMessage({ id: "alertNope" });
+  const alertYep = intl.formatMessage({ id: "alertYep" });
+
+  //? contact links bottom left
+  const contactsRef = useRef(null);
+  const isVisible = useOnScreen(contactsRef);
+  useEffect(() => {
+    if (isVisible) {
+      setIsHeroBtnVisible(true);
+    } else {
+      setIsHeroBtnVisible(false);
+    }
+  }, [setIsHeroBtnVisible, isVisible]);
+
+  //? emailjs
+  const form = useRef(null);
+  const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+  function sendMail(e: any) {
+    e.preventDefault();
+    console.log(process.env.NEXT_PUBLIC_STRAPIURLPROD);
+
+    if (form.current && SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
+        () => {
+          alert(alertYep);
+          window.location.reload();
+        },
+        () => {
+          alert(alertNope);
+        }
+      );
+    }
+  }
 
   return (
     <section className="contact-me-section">
@@ -19,20 +61,22 @@ const ContactMeSection = () => {
         <div className="contacts-illustration">
           <ContactIllustration />
         </div>
-        <form className="form">
+        <form className="form" onSubmit={sendMail}>
           <label htmlFor="name">
             {intl.formatMessage({ id: "fullName" })}:
           </label>
-          <input type="text" id="name" name="name" />
+          <input type="text" id="name" name="user_name" />
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="user_email" />
           <label htmlFor="message">
             {intl.formatMessage({ id: "message" })}:
           </label>
           <textarea name="message" id="message"></textarea>
-          <button>{intl.formatMessage({ id: "sendMess" })}</button>
+          <button type="submit">
+            {intl.formatMessage({ id: "sendMess" })}
+          </button>
         </form>
-        <div className="contact-links">
+        <div ref={contactsRef} className="contact-links">
           <p>{intl.formatMessage({ id: "otherContacts" })}</p>
           <a
             href="mailto:gio.beccaro@gmail.com"

@@ -22,6 +22,8 @@ const MainPage: NextPage = () => {
   const intl = useIntl();
 
   const [isLoading, setIsLoading] = useState(true);
+  //? animation contact links after scroll
+  const [isHeroBtnVisible, setIsHeroBtnVisible] = useState(true);
 
   useEffect(() => {
     const timer = window.setTimeout(function () {
@@ -73,11 +75,14 @@ const MainPage: NextPage = () => {
             locales={locales}
             locale={locale}
           />
-          {isLoading ? "ciao" : <HomeSection />}
+          <HomeSection
+            setIsHeroBtnVisible={setIsHeroBtnVisible}
+            isHeroBtnVisible={isHeroBtnVisible}
+          />
           <ProjectsSection />
           <SkillsSection />
           <AboutMeSection />
-          <ContactMeSection />
+          <ContactMeSection setIsHeroBtnVisible={setIsHeroBtnVisible} />
           <footer>
             <p>{intl.formatMessage({ id: "footer" })}</p>
           </footer>

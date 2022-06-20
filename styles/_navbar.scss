@@ -138,6 +138,7 @@ nav {
           }
         }
         &.theme-switch {
+          font-size: 1em;
           color: var(--accentColor);
         }
         @media (min-width: $desktopBP3) {
@@ -196,6 +197,7 @@ nav {
   margin-top: 0.25rem;
   z-index: 1001;
   transition-duration: 250ms;
+  padding: 0;
   &.close {
     color: white;
     transform: rotate(180deg);

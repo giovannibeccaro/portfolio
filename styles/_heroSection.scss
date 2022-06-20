@@ -67,13 +67,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1.5em;
+
     @media (min-width: $desktopBP) {
       align-items: center;
       margin-left: 10vw;
-      margin-top: -1em;
-    }
-    a {
-      margin-top: 3.35em;
     }
   }
 }
@@ -149,7 +147,7 @@
 }
 
 .hero-illustration {
-  width: 102vw;
+  width: 100vw;
   @media (min-width: $desktopBP) {
     width: 70vw;
     position: absolute;
@@ -168,6 +166,39 @@
   top: 0;
   right: 0;
   width: 70vw;
+}
+
+.contact-btns-after-scroll {
+  display: none;
+  @media (min-width: $desktopBP) {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    bottom: 8%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-5vw);
+    transition-duration: 500ms;
+
+    .hero-contact-link {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      border: none;
+      font-size: max(2.5rem, 2vw);
+      cursor: pointer;
+      color: var(--accentColor);
+    }
+    &.active {
+      opacity: 1;
+      display: flex;
+      position: fixed;
+      transform: translateX(5vw);
+      pointer-events: all;
+    }
+  }
 }
 
 @keyframes scrollCircle {
