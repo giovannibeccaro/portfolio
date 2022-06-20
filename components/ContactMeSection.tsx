@@ -69,7 +69,7 @@ const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
         <div className="contacts-illustration">
           <ContactIllustration />
         </div>
-        <form className="form" onSubmit={sendMail}>
+        <form className="form" onSubmit={sendMail} ref={form}>
           <label htmlFor="name">
             {intl.formatMessage({ id: "fullName" })}:
           </label>
