@@ -11,6 +11,7 @@ type Props = {
 
 const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
   const intl = useIntl();
+  const { locale } = useIntl();
   const alertNope = intl.formatMessage({ id: "alertNope" });
   const alertYep = intl.formatMessage({ id: "alertYep" });
 
@@ -106,8 +107,12 @@ const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
           </a>
         </div>
         <a
-          href="resume.pdf"
-          download="giovanni-beccaro-resume.pdf"
+          href={`giovanni-beccaro-resume${
+            locale === "it" ? "-it" : "-eng"
+          }.pdf`}
+          download={`giovanni-beccaro-resume${
+            locale === "it" ? "-it" : "-eng"
+          }.pdf`}
           className="resume"
         >
           <button className="download-link">
