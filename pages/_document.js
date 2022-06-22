@@ -14,7 +14,7 @@ export default function Document() {
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}
         />
         <script
           dangerouslySetInnerHTML={{
