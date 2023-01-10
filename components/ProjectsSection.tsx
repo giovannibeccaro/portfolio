@@ -15,6 +15,89 @@ const ProjectsSection = () => {
       >
         {intl.formatMessage({ id: "myProjects" })}
       </h2>
+
+      <article className="single-project" data-aos="fade-up">
+        <div className="screenshot traducila">
+          <Image
+            src="/traducila.webp"
+            alt="Traducila.it"
+            width={1920}
+            height={1080}
+          />
+          <div className="btns-section-desktop">
+            <a
+              href="https://traducila.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="live-website-btn">
+                {" "}
+                <Icon className="btn-icon" icon="charm:monitor-arrow" />{" "}
+                {intl.formatMessage({ id: "liveWebsite" })}
+              </button>
+            </a>
+            <a
+              href="https://github.com/giovannibeccaro/traducila-fe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="github-btn">
+                {" "}
+                <Icon className="btn-icon" icon="charm:github" />
+                {intl.formatMessage({ id: "githubCode" })}
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div className="project-info">
+          <h3>Traducila.it</h3>
+          <h4>{intl.formatMessage({ id: "h4Trad" })}</h4>
+          <p className="project-description main">
+            {intl.formatMessage({ id: "mainTrad" })}
+          </p>
+          <p className="project-description">
+            <FormattedMessage
+              id="techTrad"
+              values={{ b: (chunks) => <b>{chunks}</b> }}
+            />
+          </p>
+          <p className="project-description">
+            <FormattedMessage
+              id="featureTrad"
+              values={{ b: (chunks) => <b>{chunks}</b> }}
+            />
+          </p>
+          <div
+            className="btns-section"
+            data-aos="zoom-in-up"
+            data-aos-duration="350"
+          >
+            <a
+              href="https://traducila.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="live-website-btn">
+                {" "}
+                <Icon className="btn-icon" icon="charm:monitor-arrow" />{" "}
+                {intl.formatMessage({ id: "liveWebsite" })}
+              </button>
+            </a>
+            <a
+              href="https://github.com/giovannibeccaro/traducila-fe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="github-btn">
+                {" "}
+                <Icon className="btn-icon" icon="charm:github" />
+                {intl.formatMessage({ id: "githubCode" })}
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
       <article className="single-project" data-aos="fade-up">
         <div className="screenshot">
           <Image
@@ -84,7 +167,7 @@ const ProjectsSection = () => {
               </button>
             </a>
             <a
-              href="https://github.com/giovannibeccaro/book-manager"
+              href="https://github.com/giovannibeccaro/Pomodoro-Timer"
               target="_blank"
               rel="noreferrer"
             >

@@ -108,10 +108,10 @@ const ContactMeSection: React.FC<Props> = ({ setIsHeroBtnVisible }) => {
         </div>
         <a
           href={`giovanni-beccaro-resume${
-            locale === "it" ? "-it" : "-eng"
+            locale === "it" ? "-ita" : "-eng"
           }.pdf`}
           download={`giovanni-beccaro-resume${
-            locale === "it" ? "-it" : "-eng"
+            locale === "it" ? "-ita" : "-eng"
           }.pdf`}
           className="resume"
         >
